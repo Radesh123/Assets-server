@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Restfull API to get the my questions list
-app.post('/accountLookup', function (req, res) {
+app.get('/accountLookup', function (req, res) {
   var lookupData = {
       "accountInformation": [
           {
@@ -26,7 +26,7 @@ app.post('/accountLookup', function (req, res) {
   res.json(lookupData).status(200);
 });
 
-app.post('/standardize', function (req, res) {
+app.get('/standardize', function (req, res) {
   var standardizeData = {
       "errorIndicator": false,
       "address": {
@@ -39,7 +39,7 @@ app.post('/standardize', function (req, res) {
   res.json(standardizeData).status(200);
 });
 
-app.post('/getAccountData', function (req, res) {
+app.get('/getAccountData', function (req, res) {
   var accountData = {
       "publicID": "ID-123",
       "accountNumber": "008812345",
