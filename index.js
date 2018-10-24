@@ -7,63 +7,63 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Restfull API to get the my questions list
 app.get('/accountLookup', function (req, res) {
-  var lookupData = {
-      "accountInformation": [
-          {
-              "accountNumber": "008812345",
-              "accountName": "Test",
-              "addressLine1": "7801 E 88th St",
-              "addressLine2": ""
-          },
-          {
-              "accountNumber": "00881234456",
-              "accountName": "Test - 2",
-              "addressLine1": "7801 E 88th St",
-              "addressLine2": ""
-          }
-      ]
-  }
-  res.json(lookupData).status(200);
+    var lookupData = {
+        "accountInformation": [
+            {
+                "accountNumber": "008812345",
+                "accountName": "Test",
+                "addressLine1": "7801 E 88th St",
+                "addressLine2": ""
+            },
+            {
+                "accountNumber": "00881234456",
+                "accountName": "Test - 2",
+                "addressLine1": "7801 E 88th St",
+                "addressLine2": ""
+            }
+        ]
+    }
+    res.json(lookupData).status(200);
 });
 
 app.get('/standardize', function (req, res) {
-  var standardizeData = {
-      "errorIndicator": false,
-      "address": {
-          "addressLine1": "7801 E 88th St",
-          "city": "Indianapolis",
-          "state": "IN",
-          "zip": "46256-1233"
-      }
-  }
-  res.json(standardizeData).status(200);
+    var standardizeData = {
+        "errorIndicator": false,
+        "address": {
+            "addressLine1": "7801 E 88th St",
+            "city": "Indianapolis",
+            "state": "IN",
+            "zip": "46256-1233"
+        }
+    }
+    res.json(standardizeData).status(200);
 });
 
 app.get('/getAccountData', function (req, res) {
-  var accountData = {
-      "publicID": "ID-123",
-      "accountNumber": "008812345",
+    var accountData = {
+        "publicID": "ID-123",
+        "accountNumber": "008812345",
 
-      "locations": [],
-      "addressLine1": "7801 E 88th St",
-      "addressLine2": "",
-      "businessName": "Test Business",
-      "city": "Indianapolis",
-      "state": "IN",
-      "zipCode": "46256-1233",
-      "accountDetails": {
-          "nAICSCode": "1234",
-          "subNiche": "sub-niche",
-          "niche": "niche",
-          "fein": "1234-1234",
-          "businessStartedYear": "2018",
-          "businessStartedMonth": "January",
-          "firstName": "John",
-          "lastName": "Doe"
-      },
-      "displayName": "Test-Business"
-  }
-  res.json(accountData).status(200);
+        "locations": [],
+        "addressLine1": "7801 E 88th St",
+        "addressLine2": "",
+        "businessName": "Test Business",
+        "city": "Indianapolis",
+        "state": "IN",
+        "zipCode": "46256-1233",
+        "accountDetails": {
+            "nAICSCode": "1234",
+            "subNiche": "sub-niche",
+            "niche": "niche",
+            "fein": "1234-1234",
+            "businessStartedYear": "2018",
+            "businessStartedMonth": "January",
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "displayName": "Test-Business"
+    }
+    res.json(accountData).status(200);
 });
 
 app.get('/getClassifications', function (req, res) {
@@ -1772,10 +1772,10 @@ app.get('/getClassifications', function (req, res) {
             "classCodeBasisCode": "Church with Camp, Daycare or School"
         }]
     }
-    res.json(accountData).status(200);
-  });
+    res.json(classificationData).status(200);
+});
 
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 
