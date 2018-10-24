@@ -1777,19 +1777,19 @@ app.get('/getClassifications', function (req, res) {
 
 app.get('/eligibilityQuestionsSet', function (req, res) {
     var questionsSet = [
-        {
-            code: 'question_1', question: 'Is the applicants business open past 12AM(mid night)',
-            options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null
-        },
-        {
-            code: 'question_2', question: 'Are the annual gross sales delivered from off premises operations greater than 25%?',
-            options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null
-        },
-        {
-            code: 'question_3', question: 'Employee\'s Count across the firms',
-            options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'integer', answer: null
-        }
+        { code: 'question_1', question: 'Is the applicants business open past 12AM (midnight)?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_2', question: 'Do all products comply with the Federal Food, Drug, and Cosmetic Act and FDA regulation in all other aspects?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_3', question: 'Are products purchased directly from suppliers outside the United States?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_4', question: 'Is the percentage of total floor area open to the public greater than 25%?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_5', question: 'Are the annual gross sales derived from retail operations greater than 25%?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_6', question: 'Does the applicant do any packaging or repackaging of any products to be sold under their own label?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_7', question: 'What is the applicants radius (miles) of operations?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'integer', answer: null },
+        { code: 'question_8', question: 'Are the annual gross sales derived from off premises operations greater than 25%?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_9', question: 'Do you sell, store, dispense, process or distribute marijuana/cannabis products, oil or paraphernalia on your premises for recreational and/or medicinal purposes?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_10', question: 'Does the applicant operate out of a residence?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'text', answer: null },
+        { code: 'question_11', question: '', options: [{ code: 'male', value: 'Male' }, { code: 'female', value: 'Female' }, { code: 'others', value: 'Others' }], type: 'multi-choice', answer: null }
     ]
+
     res.json(questionsSet).status(200);
 });
 
