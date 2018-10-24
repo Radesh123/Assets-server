@@ -1775,6 +1775,24 @@ app.get('/getClassifications', function (req, res) {
     res.json(classificationData).status(200);
 });
 
+app.get('/eligibilityQuestionsSet', function (req, res) {
+    var questionsSet = [
+        {
+            code: 'question_1', question: 'Is the applicants business open past 12AM(mid night)',
+            options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null
+        },
+        {
+            code: 'question_2', question: 'Are the annual gross sales delivered from off premises operations greater than 25%?',
+            options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null
+        },
+        {
+            code: 'question_3', question: 'Employee\'s Count across the firms',
+            options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'integer', answer: null
+        }
+    ]
+    res.json(questionsSet).status(200);
+});
+
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`))
 
