@@ -1794,7 +1794,7 @@ app.get('/eligibilityQuestionsSet', function (req, res) {
         { code: 'question_6', question: 'Does the applicant do any packaging or repackaging of any products to be sold under their own label?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
         { code: 'question_7', question: 'What is the applicants radius (miles) of operations?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'integer', answer: null },
         { code: 'question_8', question: 'Are the annual gross sales derived from off premises operations greater than 25%?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
-        { code: 'question_9', question: 'Do you sell, store, dispense, process or distribute marijuana/cannabis products, oil or paraphernalia on your premises for recreational and/or medicinal purposes?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
+        { code: 'question_9', question: 'Do you sell& store, dispense, process or distribute marijuana/cannabis products, oil or paraphernalia on your premises for recreational and/or medicinal purposes?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'boolean', answer: null },
         { code: 'question_10', question: 'Does the applicant operate out of a residence?', options: [{ code: true, value: 'Yes' }, { code: false, value: 'No' }], type: 'text', answer: null },
         { code: 'question_11', question: '', options: [{ code: 'male', value: 'Male' }, { code: 'female', value: 'Female' }, { code: 'others', value: 'Others' }], type: 'multi-choice', answer: null }
     ]
